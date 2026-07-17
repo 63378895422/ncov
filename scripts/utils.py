@@ -35,7 +35,7 @@ def extract_tar_file_contents(filename, filetype):
     Raises
     ------
     FileNotFoundError :
-        When a file with the the requested file type's extension could not be
+        When a file with the requested file type's extension could not be
         found in the given tar archive.
 
     """
