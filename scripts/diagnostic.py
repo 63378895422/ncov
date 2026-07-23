@@ -59,7 +59,7 @@ if __name__ == '__main__':
         print("Skipping QC steps which rely on submission recency, as metadata is missing 'date_submitted'")
 
     check_clade_dates = "Nextstrain_clade" in metadata
-    #auto exclude sequences N weeks before their clade emergence
+    # auto exclude sequences N weeks before their clade emergence
     if check_clade_dates:
         dates = metadata.date.apply(lambda x: datestr_to_ordinal(x))
         clade_dates = metadata.Nextstrain_clade.apply(lambda x: earliest_clade_date(x, args.clade_emergence_dates, window_weeks=args.clade_emergence_window))
